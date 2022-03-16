@@ -33,7 +33,7 @@ public class RegistrationTests extends TestBase {
 //        $("#stateCity-wrapper").$(byText("Noida")).click();
 //        $("#submit").click();
 
-        $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
+        $("[class='modal-header']").shouldBe(text("Thanks for submitting the form"));
         $(".table-responsive").$(byText("Student Name"))
                 .parent().shouldHave(text("Alex Egorov"));
     }
