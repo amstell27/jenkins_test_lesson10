@@ -31,7 +31,7 @@ public class RegistrationTests extends TestBase {
 //        $("#stateCity-wrapper").$(byText("NCR")).click();
 //        $("#city").click();
 //        $("#stateCity-wrapper").$(byText("Noida")).click();
-//        $("#submit").click();
+        $("#submit").click();
 
         $("[class='modal-header']").shouldBe(text("Thanks for submitting the form"));
         $(".table-responsive").$(byText("Student Name"))
