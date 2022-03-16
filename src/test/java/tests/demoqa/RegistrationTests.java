@@ -27,11 +27,11 @@ public class RegistrationTests extends TestBase {
         $("#hobbiesWrapper").$(byText("Sports")).click();
 //        $("#uploadPicture").uploadFromClasspath("img/1.png");
         $("#currentAddress").setValue("Some address 1");
-        $("#state").scrollTo().click();
-        $("#stateCity-wrapper").$(byText("NCR")).click();
-        $("#city").click();
-        $("#stateCity-wrapper").$(byText("Noida")).click();
-        $("#submit").click();
+//        $("#state").scrollTo().click();
+//        $("#stateCity-wrapper").$(byText("NCR")).click();
+//        $("#city").click();
+//        $("#stateCity-wrapper").$(byText("Noida")).click();
+//        $("#submit").click();
 
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
         $(".table-responsive").$(byText("Student Name"))
