@@ -1,9 +1,13 @@
 package tests.properties;
 
 import com.google.gson.internal.bind.util.ISO8601Utils;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
+@Tag("properties")
 public class SystemPropertiesTests {
+
 
     @Test
     void someTest1(){
