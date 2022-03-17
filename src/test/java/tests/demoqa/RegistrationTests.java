@@ -1,5 +1,6 @@
 package tests.demoqa;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -10,6 +11,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class RegistrationTests extends TestBase {
 
     @Test
+    @Disabled
     void fillFormTest() {
         open("/automation-practice-form");
         $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));

@@ -7,13 +7,15 @@ repositories {
     mavenCentral()
 }
 
-def junitversion = "5.8.2";
-def allureversion = "2.17.2";
+def junitversion = "5.8.2",
+    allureversion = "2.17.2",
+    selenideversion = "6.3.4"
+
 dependencies {
     testImplementation(
             "org.junit.jupiter:junit-jupiter:$junitversion",
             "io.qameta.allure:allure-selenide:$allureversion",
-            'com.codeborne:selenide:6.3.0'
+            "com.codeborne:selenide:$selenideversion"
     )
     testRuntimeOnly(
             "org.junit.jupiter:junit-jupiter-engine:$junitversion",
@@ -46,6 +48,7 @@ allure {
     }
 }
 
-test {
+tasks.withType(Test) {
+    systemProperties(System.getProperties())
     useJUnitPlatform()
 }
