@@ -23,7 +23,12 @@ dependencies {
     )
 }
 
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
 tasks.withType(Test) {
+    systemProperties(System.getProperties())
     useJUnitPlatform()
     testLogging {
         lifecycle {
@@ -48,13 +53,13 @@ allure {
     }
 }
 task properties_test(type: Test) {
-    useJUnitPlatform{
+    useJUnitPlatform {
         includeTags "properties"
     }
 }
 
 task smoke_test(type: Test) {
-    useJUnitPlatform{
+    useJUnitPlatform {
         includeTags "smoke"
     }
 }
